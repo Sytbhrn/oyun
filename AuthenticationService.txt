@@ -1,0 +1,5 @@
+package game;
+
+public interface AuthenticationService {
+	public boolean Authentication(Gamer gamer);
+}

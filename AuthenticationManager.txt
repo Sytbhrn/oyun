@@ -1,0 +1,22 @@
+package game;
+
+public class AuthenticationManager implements AuthenticationService{
+	
+	public boolean Authentication(Gamer gamer) {
+		
+		if (
+				gamer.getFirstName() == "Üsame" & 
+				gamer.getId() == 10 &
+				gamer.getTc() == "12345" 
+				) {
+			
+			return true;
+			
+		}
+		
+		
+		return false;
+	}
+
+
+}

@@ -1,0 +1,39 @@
+package game;
+
+public class GamerManager implements GamerService{
+
+	AuthenticationService authenticationservice;
+	
+	public GamerManager(AuthenticationService authenticationservice) {
+		this.authenticationservice = authenticationservice;
+	}
+	
+	public void add(Gamer gamer) {
+		
+		if (authenticationservice.Authentication(gamer) == true) {
+			System.out.println("Kullanıcı Girisi Basarılı");
+			
+			System.out.println(gamer.getFirstName() +  " adlı kullanıcı eklendi.");
+		}
+		else {
+			
+			System.out.println("Hatalı Kullanıcı");
+		}
+		
+
+
+
+	}
+	
+	public void update(Gamer gamer) {
+		
+		System.out.println(gamer.getFirstName() +  " adlı kullanıcı bilgileri güncellendi.");
+	}
+
+	public void delete(Gamer gamer) {
+		System.out.println(gamer.getFirstName() +  " adlı kullanıcı silindi.");
+	
+		
+	}
+
+}

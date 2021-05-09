@@ -1,0 +1,6 @@
+package game;
+
+public interface OrderService {
+	public void orderDetail(Game game,Gamer gamer,Campaign campaign);
+
+}

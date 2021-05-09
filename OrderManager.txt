@@ -1,0 +1,21 @@
+package game;
+
+public class OrderManager implements OrderService{
+
+	public void orderDetail(Game game,Gamer gamer,Campaign campaign) {
+		
+		double sonFiyat = game.getPrice() - (game.getPrice() * campaign.getDiscount()/100) ;
+		
+		
+		System.out.println("Sipariş No: 1");
+		System.out.println("Satın Alan: " + gamer.getFirstName() + " " + gamer.getLastName());
+		System.out.println("Oyun: " + game.getGameName());
+		System.out.println("İndirimden Önceki Fiyat: " + game.getPrice());
+		System.out.println("İndirim Adı: " + campaign.getCampaignName());
+		System.out.println("İndirim Oranı: " +"%"+ campaign.getDiscount());
+		System.out.println("İndirimli Fiyat: " + sonFiyat);
+	
+	}
+
+
+}

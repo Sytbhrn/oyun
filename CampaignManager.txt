@@ -1,0 +1,19 @@
+package game;
+
+public class CampaignManager {
+	public void add(Campaign campaign) {
+
+		System.out.println(campaign.getCampaignName() + " adlı kampanya eklendi.");
+	}
+
+	public void update(Campaign campaign) {
+
+		System.out.println(campaign.getCampaignName() + " adlı kampanya güncellendi.");
+	}
+
+	public void delete(Campaign campaign) {
+
+		System.out.println(campaign.getCampaignName() + " adlı kampanya silindi.");
+	}
+
+}
